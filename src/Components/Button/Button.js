@@ -1,7 +1,7 @@
 import './Button.css';
+import React, {useState, useEffect} from 'react';
 
 const Button = (props) => {
-
     const assignKey = () => {
         let key;
         switch (props.id) {
@@ -37,9 +37,35 @@ const Button = (props) => {
         }
         return key;
     }
+    const getKey = assignKey();
+
+    const [active, setActive] = useState('');
+
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            if(event.key === getKey.toLocaleLowerCase()){
+                setActive('active');
+            }
+        }
+
+        const handleKeyUp = (event) => {
+            if(event.key === getKey.toLocaleLowerCase()){
+                setActive('');
+            }
+        }
+
+        document.addEventListener('keydown', handleKeyDown);
+        document.addEventListener('keyup', handleKeyUp);
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+            document.removeEventListener('keyup', handleKeyUp);
+        }
+    },[getKey])
+
     return (
-        <button>
-            <h1>{assignKey()}</h1>
+        <button className={active}>
+            <h1>{getKey}</h1>
         </button>
     );
 }
