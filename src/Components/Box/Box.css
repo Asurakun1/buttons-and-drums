@@ -1,0 +1,41 @@
+.box{
+    background-color: seashell;
+    margin-top: 25vh;
+    min-height: 45vh;
+    min-width: 40vw;
+    max-height: 45vh;
+    max-width: 40vw;
+    border-radius: 10%;
+    box-shadow: 0 1rem 1.5rem 1rem rgba(0, 0, 0, 0.349);
+  }
+
+.box .inner-box{
+    box-shadow: 0 1rem 2rem 1.5rem rgba(0, 0, 0, 0.212);
+    margin: 2rem;
+    min-height: 84%;
+    max-height: 84%;
+    border-radius: 10%;
+    position: relative;
+}
+
+.box .inner-box .inner-inner-box{
+  min-height: 12rem;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 20vw;
+  align-items: center;
+  justify-content: center;
+  top: 8vh;
+  gap: 0.5rem;
+}
+
+@media only screen and (max-width: 1165px){
+  .box{
+    min-width: 60vw;
+  }
+
+  .inner-inner-box{
+    min-width: 28vw;
+  }
+}
