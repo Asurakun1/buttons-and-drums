@@ -22,4 +22,19 @@ button:active, .active{
     }
     
 }
-  
+
+
+@media only screen and (max-width: 511px){
+    button{
+        min-width: 14vw;
+    }
+    
+}
+
+
+@media only screen and (max-width: 245px){
+    button{
+        min-width: 20vw;
+    }
+    
+}

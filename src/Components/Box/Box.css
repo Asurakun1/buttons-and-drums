@@ -17,7 +17,9 @@
     border-radius: 10%;
     position: relative;
 }
-
+/*
+this section is for the nine-buttons
+*/
 .box .inner-box .inner-inner-box{
   min-height: 12rem;
   position: absolute;
@@ -38,4 +40,26 @@
   .inner-inner-box{
     min-width: 28vw;
   }
+}
+
+
+
+@media only screen and (max-width: 511px){
+  .box{
+    min-width: 100%;
+    min-height: 60vh;
+  }
+
+  .inner-inner-box{
+    left: 15vw;
+    min-width: 50vw;
+  }
+}
+
+
+@media only screen and (max-width: 245px){
+  .inner-inner-box{
+    left: 10vw;
+  }
+  
 }
