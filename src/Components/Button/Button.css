@@ -5,11 +5,16 @@ button{
     max-width: 5vw;
     border-radius: 10%;
     cursor: pointer;
-    box-shadow: 0.3rem 0.4rem 0.1rem 0 rgba(0, 0, 0, 0.801);
+    box-shadow: 0.25rem 0.25rem 0.01rem 0 rgba(0, 0, 0, 0.897);
+    transform: translateY(0);
+    transition: all 0.1s ease-out;
 
 }
 
-
+button:active, .active{
+    box-shadow: 0rem 0rem 0rem 0 rgba(0, 0, 0, 0.815);
+    transform: translateY(3px);
+}
 
 @media only screen and (max-width: 1165px){
     button{
