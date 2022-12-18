@@ -7,7 +7,7 @@
     cursor: pointer;
     box-shadow: 0.25rem 0.25rem 0.01rem 0 rgba(0, 0, 0, 0.897);
     transform: translateY(0);
-    transition: all 0.1s ease-out;
+    transition: background-color 0.5s ease-out, color 0.5s ease-out, transform 0.1s ease-out, box-shadow 0.1s ease-out;
 
 }
 
@@ -19,6 +19,11 @@
 .on{
     color: #ffffff;
     background-color: #2a3bbd;
+}
+
+.on-plus{
+    background-color: white;
+    color: black;
 }
 
 @media only screen and (max-width: 1165px){

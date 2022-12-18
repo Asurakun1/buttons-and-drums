@@ -40,16 +40,22 @@ const Button = (props) => {
     const getKey = assignKey();
 
     const [active, setActive] = useState('');
+    const [onPlus, setOnPlus] = useState('');
     useEffect(() => {
         const handleKeyDown = (event) => {
             if(event.key === getKey.toLocaleLowerCase()){
                 setActive('active');
+
+                if(props.on){
+                    setOnPlus('on-plus');
+                }
             }
         }
 
         const handleKeyUp = (event) => {
             if(event.key === getKey.toLocaleLowerCase()){
                 setActive('');
+                setOnPlus('');
             }
         }
 
@@ -60,7 +66,7 @@ const Button = (props) => {
             document.removeEventListener('keydown', handleKeyDown);
             document.removeEventListener('keyup', handleKeyUp);
         }
-    },[getKey]);
+    },[getKey, props.on]);
 
 
     const [style, setStyle] = useState('');
@@ -76,7 +82,7 @@ const Button = (props) => {
 
     }
     return (
-        <button className={`${active} ${style}`}
+        <button className={`${active} ${style} ${onPlus}`}
             onClick={handleClick}
             >
             <h1>{getKey}</h1>

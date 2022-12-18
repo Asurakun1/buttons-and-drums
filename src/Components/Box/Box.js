@@ -7,16 +7,6 @@ const Box = () => {
     const [toggleOn, setToggleOn] = useState(true);
     const [toggleOff, setToggleOff] = useState(false);
 
-    const toggleButton = () => {
-        if(toggleOn){
-            setToggleOn(false);
-            setToggleOff(true);
-        }else{
-            setToggleOn(true);
-            setToggleOff(false);
-        }
-    }
-
     const makeNineButtons = () => {
         const buttonArray = [];
         const counter = 9;
@@ -30,7 +20,14 @@ const Box = () => {
     return(
         <div className='box'>
             <div className='inner-box'>
-                <ToggleSection toggle={toggleButton} visibleOn={toggleOn} visibleOff={toggleOff}/>
+                <ToggleSection 
+                    toggleOn={setToggleOn}
+                    toggleOff={setToggleOff}
+                    visibleOn={toggleOn}
+                    visibleOff={toggleOff}
+
+
+                    />
                 <div className='inner-inner-box'>
                 {
                     makeNineButtons().map(button => button)

@@ -3,11 +3,11 @@ const ToggleOn = (props) => {
     const onOff = () => {
         if(props.visibility){
             return ({
-                visibility: `visible`
+                visibility: `visible`,
             });
         }else{
             return ({
-                visibility: `hidden`
+                visibility: `hidden`,
             });
         }
     }
