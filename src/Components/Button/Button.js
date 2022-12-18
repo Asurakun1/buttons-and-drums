@@ -40,7 +40,6 @@ const Button = (props) => {
     const getKey = assignKey();
 
     const [active, setActive] = useState('');
-
     useEffect(() => {
         const handleKeyDown = (event) => {
             if(event.key === getKey.toLocaleLowerCase()){
@@ -61,10 +60,25 @@ const Button = (props) => {
             document.removeEventListener('keydown', handleKeyDown);
             document.removeEventListener('keyup', handleKeyUp);
         }
-    },[getKey])
+    },[getKey]);
 
+
+    const [style, setStyle] = useState('');
+    useEffect(() => {
+        if(props.on){
+            setStyle('on');
+        }else{
+            setStyle({});
+        }
+    }, [props.off, props.on])
+
+    const handleClick = () =>{
+
+    }
     return (
-        <button className={active}>
+        <button className={`${active} ${style}`}
+            onClick={handleClick}
+            >
             <h1>{getKey}</h1>
         </button>
     );

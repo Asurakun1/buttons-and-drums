@@ -1,4 +1,4 @@
-button{
+.inner-inner-box button{
     min-height: 7vh;
     min-width: 5vw;
     max-height: 7vh;
@@ -11,13 +11,18 @@ button{
 
 }
 
-button:active, .active{
+.inner-inner-box button:active, .inner-inner-box .active{
     box-shadow: 0rem 0rem 0rem 0 rgba(0, 0, 0, 0.815);
     transform: translateY(3px);
 }
 
+.on{
+    color: #ffffff;
+    background-color: #2a3bbd;
+}
+
 @media only screen and (max-width: 1165px){
-    button{
+    .inner-inner-box button{
         min-width: 8vw;
     }
     
@@ -25,7 +30,7 @@ button:active, .active{
 
 
 @media only screen and (max-width: 511px){
-    button{
+    .inner-inner-box button{
         min-width: 14vw;
     }
     

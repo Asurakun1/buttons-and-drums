@@ -1,0 +1,7 @@
+.toggle-section{
+    position: absolute;
+    right: 5vw;
+    top: 3vw;
+    background-color: rgb(51, 51, 51);
+    border-radius: 10%;
+  }
