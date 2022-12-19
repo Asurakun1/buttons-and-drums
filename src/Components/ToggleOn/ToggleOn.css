@@ -2,5 +2,6 @@
     font-size: 1.3rem;
     cursor: pointer;
     border-radius: 10%;
+    border: 1 solid black;
 }
 

@@ -16,7 +16,8 @@ const ToggleOn = (props) => {
             className={`toggle ${props.id}`}
             onClick={props.onClick}
             style={onOff()}
-             >{props.id}</button>
+             >{props.id}
+        </button>
     );
 }
 

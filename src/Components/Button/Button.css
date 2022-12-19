@@ -24,6 +24,7 @@
 .on-plus{
     background-color: white;
     color: black;
+    transition: background-color 0.05s ease-out;
 }
 
 @media only screen and (max-width: 1165px){
